@@ -10,6 +10,5 @@ module.exports = (req, res, next) => {
   if (status && !["pending", "in-progress", "done"].includes(status)) {
     return res.status(400).json({ error: "Invalid status value" });
   }
-
   next();
 };
